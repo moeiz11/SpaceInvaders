@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace SpaceInvaders
 {
@@ -18,10 +19,12 @@ namespace SpaceInvaders
         }
 
 
-        private void button_mousehover(object sender, EventArgs e)
+        private void button_mouseenter(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
-            btn.ForeColor = Color.Yellow;
+            btn.ForeColor = Color.MediumSpringGreen;
+            this.soundmaker = new SoundPlayer(@"C:\Users\moiez\source\repos\SpaceInvaders\SpaceInvaders\ButtonHoverSound.wav");
+            soundmaker.Play();
         }
         private void button_mouseleave(object sender, EventArgs e)
         {

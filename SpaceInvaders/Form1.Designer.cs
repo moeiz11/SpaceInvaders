@@ -1,4 +1,6 @@
-﻿namespace SpaceInvaders
+﻿using System.Media;
+
+namespace SpaceInvaders
 {
     partial class Form1
     {
@@ -48,8 +50,8 @@
             this.buttonStart.Text = "START";
             this.buttonStart.UseVisualStyleBackColor = true;
             this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
+            this.buttonStart.MouseEnter += new System.EventHandler(this.button_mouseenter);
             this.buttonStart.MouseLeave += new System.EventHandler(this.button_mouseleave);
-            this.buttonStart.MouseHover += new System.EventHandler(this.button_mousehover);
             // 
             // buttonSkins
             // 
@@ -64,8 +66,8 @@
             this.buttonSkins.Text = "SKINS";
             this.buttonSkins.UseVisualStyleBackColor = true;
             this.buttonSkins.Click += new System.EventHandler(this.buttonSkins_Click);
+            this.buttonSkins.MouseEnter += new System.EventHandler(this.button_mouseenter);
             this.buttonSkins.MouseLeave += new System.EventHandler(this.button_mouseleave);
-            this.buttonSkins.MouseHover += new System.EventHandler(this.button_mousehover);
             // 
             // buttonShop
             // 
@@ -80,8 +82,8 @@
             this.buttonShop.Text = "SHOP";
             this.buttonShop.UseVisualStyleBackColor = true;
             this.buttonShop.Click += new System.EventHandler(this.buttonShop_Click);
+            this.buttonShop.MouseEnter += new System.EventHandler(this.button_mouseenter);
             this.buttonShop.MouseLeave += new System.EventHandler(this.button_mouseleave);
-            this.buttonShop.MouseHover += new System.EventHandler(this.button_mousehover);
             // 
             // buttonQuit
             // 
@@ -97,9 +99,12 @@
             this.buttonQuit.Text = "QUIT";
             this.buttonQuit.UseVisualStyleBackColor = false;
             this.buttonQuit.Click += new System.EventHandler(this.buttonQuit_Click);
+            this.buttonQuit.MouseEnter += new System.EventHandler(this.button_mouseenter);
             this.buttonQuit.MouseLeave += new System.EventHandler(this.button_mouseleave);
-            this.buttonQuit.MouseHover += new System.EventHandler(this.button_mousehover);
-            // 
+            //
+            // Soundplayer
+            //
+
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -122,6 +127,7 @@
         private System.Windows.Forms.Button buttonSkins;
         private System.Windows.Forms.Button buttonShop;
         private System.Windows.Forms.Button buttonQuit;
+        private SoundPlayer soundmaker = new SoundPlayer();
     }
 }
 
